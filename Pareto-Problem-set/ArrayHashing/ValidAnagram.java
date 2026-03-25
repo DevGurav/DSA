@@ -1,3 +1,16 @@
+// Problem: LeetCode 242 - Valid Anagram
+// Pattern: Array Hashing (Frequency Count)
+// Core idea: Increment counts for s and decrement for t in one pass.
+// Invariant: All counts must be zero at end for strings to be anagrams.
+// Complexity: O(n) time, O(1) space (26 lowercase letters).
+// Dry run: s="ab", t="ba" -> +a,+b and -b,-a => all zeros -> true.
+// Why this works: Matching frequency vectors is equivalent to anagram equality.
+// Mental Trigger (simple): Add for first word, subtract for second word; if every letter balances to zero, both words use the same letters.
+// Flow Dry Run (same order as code below):
+// A) Start count[26]=0.
+// B) i=0 -> +count['a'], -count['b'].
+// C) i=1 -> +count['b'], -count['a'].
+// D) Final count array all zeros, return true.
 // freqency array approach (charcater)
 
 public class ValidAnagram {
@@ -11,6 +24,7 @@ public class ValidAnagram {
         }
 
         // Step 2: Create frequency array for 26 lowercase letters
+        // count[c] stores net frequency difference for character c.
         int[] count = new int[26];
 
         // Step 3: Traverse both strings together
@@ -27,6 +41,8 @@ public class ValidAnagram {
 
             // For 'n' in t → -1
             count[t.charAt(i) - 'a']--;
+
+            // Invariant check: net frequency difference is tracked at each step.
 
             /*
              Dry Run (first few steps):
@@ -45,6 +61,7 @@ public class ValidAnagram {
 
         // Step 4: Check if all counts are zero
         // If yes → valid anagram
+        // If any character has non-zero net count, strings differ.
         for (int c : count)
         {
             if (c != 0)
