@@ -7,6 +7,7 @@ Use this during interview prep:
 | file | pattern | one-line trick |
 |---|---|---|
 | Math Quest/CheckArithmetic.java | Math + Position Mapping | Use min/max to get diff, then verify each value fits exactly one arithmetic slot. |
+| Math Quest/PermutationSequence.java | Factorial Number System | Use factorial block sizes to directly pick each digit of the k-th permutation. |
 | Pareto-Problem-set/ArrayHashing/ValidAnagram.java | Array Hashing | Increment for first string and decrement for second; all counts must end at zero. |
 | Pareto-Problem-set/ArrayHashing/ContainsDuplicate.java | HashSet | Return true as soon as a seen number appears again. |
 | Pareto-Problem-set/Binary Search/BinarySearch.java | Binary Search | On sorted data, one comparison safely removes half the range. |
