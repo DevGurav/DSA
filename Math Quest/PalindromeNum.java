@@ -11,7 +11,7 @@
 // B) Iteration 1 -> lastDigit=1, reversedHalf=1, x=122.
 // C) Iteration 2 -> lastDigit=2, reversedHalf=12, x=12.
 // D) Stop (x <= reversedHalf), x==reversedHalf so return true.
-class PalindromeNum {
+public class PalindromeNum {
     public boolean isPalindrome(int x) {
         
         // 1. Negative numbers are not palindromes (e.g., -121 != 121-)
@@ -51,3 +51,31 @@ class PalindromeNum {
         System.out.print(obj.isPalindrome(10201));  // true
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+//runtime 4ms
+// public class PalindromeNum{
+//     public boolean isPalindrome(int x) {
+//         if(x<0){
+//             return false;
+//         }
+//         int revers=0;
+//         int r=0;
+//         int temp=x;
+//         while(x!=0){
+//             r=x%10;
+//             revers=revers*10+r;
+//             x=x/10;
+//         }
+//         return temp==revers;
+//     }
+// }

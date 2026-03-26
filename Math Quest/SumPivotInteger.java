@@ -11,7 +11,7 @@
 // B) i=2 -> lsum=3, rsum=35 (not equal), continue.
 // C) i=6 -> lsum=21, rsum=21 (equal).
 // D) Return 6.
-class SumPivotInteger {
+public class SumPivotInteger {
     public int pivotInteger(int n) {
         // Base case where pivot is trivially 1.
         if(n==1)
@@ -45,3 +45,30 @@ class SumPivotInteger {
        System.out.print("sum pivot element is "+pivot);
     }
 }
+
+
+
+
+//runtime 0ms
+
+
+// public class SumPivotInteger {
+//     public int pivotInteger(int n) {
+//         // Step 1: Calculate total sum from 1 to n
+//         // Formula: n * (n + 1) / 2
+//         int p = n * (n + 1) / 2;
+
+//         // Step 2: Find square root of total sum
+//         int root = (int) Math.sqrt(p);
+
+//         // Step 3: Check if p is a perfect square
+//         // If root * root == p → perfect square
+//         if (root * root == p) {
+//             // Step 4: Return root as pivot integer
+//             return root;
+//         } else {
+//             // No valid pivot exists
+//             return -1;
+//         }
+//     }
+// }

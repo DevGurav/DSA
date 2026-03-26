@@ -11,7 +11,7 @@
 // B) len=1 -> remainder=(0*10+1)%3=1.
 // C) len=2 -> remainder=(1*10+1)%3=2.
 // D) len=3 -> remainder=(2*10+1)%3=0, return 3.
-class DivByK {
+public class DivByK {
     public int smallestRepunitDivByK(int k)
     {
         // Recall: repunit (<--repeated unit) can never be divisible by 2 or 5.
