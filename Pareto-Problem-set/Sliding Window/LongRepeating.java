@@ -66,68 +66,10 @@ class LongRepeating {
 }
 
 
-    // my logic
-
-    //     int count = 0;
-    //     // if(s.charAt(0) == s.charAt(1)){
-    //     //     count = 2;
-    //     // }
-    //     // else 
-    //     // {
-    //     //     count = 1;
-    //     // }
-    //     char a = 'A';
-    //     //char b = 'B';
-    //     int countA = 0,countB = 0;
-
-    //     //for(int i = 0;i<1;i++)
-    //     //{
-    //         if(a == s.charAt(0))
-    //         {
-    //             ++countA ;
-    //         }
-    //         else
-    //             ++countB ;
-    //     //}
-    //     int maxcount = 0;
-        
-    //     for(int left = 0,right = 1; left < s.length() && right < s.length(); right++)
-    //     {
-        
-    //         if ( (right - left + 1) - count > k)
-    //         {
-    //             if(a == s.charAt(left))
-    //             {
-    //                 countA--;
-    //             }
-    //             else
-    //             {
-    //                 countB--;
-    //             }
-    //             left++;
-    //         }
-    //         if ( a == s.charAt(right))
-    //         {
-    //             ++countA;
-    //         }
-    //         else 
-    //         {
-    //             ++countB;
-    //         }
-            
-    //         count = countA > countB ? countA : countB;
-    //         if (maxcount < count)
-    //         {
-    //             maxcount = count;
-    //         }
-    //     }
-    //     return maxcount + k;
-    // }
-
-
+    
 
 /*
-class Solution {
+class LongRepeating {
     public int characterReplacement(String s, int k) {
 
         int[] count = new int[26];

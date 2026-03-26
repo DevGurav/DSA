@@ -57,7 +57,7 @@ public class SelfDivide {
                     }
                     x /= 10;
                 }
-                if(flag == true)
+                if(flag == true) //if number is self divided , adds in the result 
                 result.add(num);
             }
         return result;

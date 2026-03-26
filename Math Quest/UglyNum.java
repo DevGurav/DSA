@@ -69,27 +69,35 @@ public class UglyNum {
 
 
 // runtime 0ms
-// class Solution {
+// public class UglyNum {
 //     public boolean isUgly(int n) {
-//         int i;
-//         if(n<=0)
-//         {
+//         // 1. Edge Case: Ugly numbers must be positive.
+//         // Example: If n = 0 or n = -8, return false immediately.
+//         if (n <= 0) {
 //             return false;
 //         }
-//         while(n%2==0)
-//         {
-//             n =n/2;
-//         }
-//          while(n%3==0)
-//         {
-//             n =n/3;
-//         }
-//          while(n%5==0)
-//         {
-//             n =n/5;
-//         }
-//         return n==1;
 
-        
+//         // 2. Remove all factors of 2.
+//         // Example: If n = 12, it becomes 6, then 3.
+//         while (n % 2 == 0) {
+//             n = n / 2;
+//         }
+
+//         // 3. Remove all factors of 3.
+//         // Example: If n = 3, it becomes 1.
+//         while (n % 3 == 0) {
+//             n = n / 3;
+//         }
+
+//         // 4. Remove all factors of 5.
+//         // Example: If n = 25, it becomes 5, then 1.
+//         while (n % 5 == 0) {
+//             n = n / 5;
+//         }
+
+//         // 5. Check the remainder.
+//         // If the remaining number is 1, it means it only had 2, 3, or 5 as factors.
+//         // If n > 1 (e.g., n = 7), it means there was another prime factor involved.
+//         return n == 1;        
 //     }
 // }

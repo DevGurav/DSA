@@ -53,17 +53,36 @@ public class DivByK {
 
 
 // Runtime 1ms
-// class Solution {
+// public class DivByK {
 //     public int smallestRepunitDivByK(int k) {
-//         if (k % 2 == 0 || k % 5 == 0) return -1;
+//     // 1. Check Divisibility Rule: 
+//     // Any number ending in 1 cannot be divided by an even number (2) or a multiple of 5.
+//     // Example: If k = 2 or k = 5, we can never find a repunit (1, 11, 111...) that works.
+//     if (k % 2 == 0 || k % 5 == 0) return -1;
 
-//         int remainder = 1 % k;
-//         int length = 1;
+//     // 2. Initialize with the first repunit: "1"
+//     // remainder: result of 1 / k
+//     // length: we have one digit so far
+//     int remainder = 1 % k;
+//     int length = 1;
 
-//         while (remainder != 0) {
-//             remainder = (remainder * 10 + 1) % k;
-//             length++;
-//         }
-//         return length;
+//     // 3. Loop until the remainder is 0 (meaning the repunit is divisible by k).
+//     // We only need to check up to 'k' times due to the Pigeonhole Principle.
+//     while (remainder != 0) {
+//         // 4. Generate the next repunit remainder:
+//         // Mathematically: next_repunit = current_repunit * 10 + 1
+//         // Example: If current is 11, next is 11 * 10 + 1 = 111.
+//         // We apply % k to prevent overflow.
+//         remainder = (remainder * 10 + 1) % k;
+        
+//         // 5. Increment digit count.
+//         length++;
+        
+//         // Optimization Note: If we loop more than k times without finding 0, 
+//         // we are in an infinite loop, but the k%2/k%5 check above prevents this.
 //     }
+
+//     // 6. Return the total count of '1's used.
+//     return length;
+// }
 // }
