@@ -6,17 +6,26 @@ Use this during interview prep:
 
 | file | pattern | one-line trick |
 |---|---|---|
+| Math Quest/CheckArithmetic.java | Math + Position Mapping | Use min/max to get diff, then verify each value fits exactly one arithmetic slot. |
 | Pareto-Problem-set/ArrayHashing/ValidAnagram.java | Array Hashing | Increment for first string and decrement for second; all counts must end at zero. |
+| Pareto-Problem-set/ArrayHashing/ContainsDuplicate.java | HashSet | Return true as soon as a seen number appears again. |
 | Pareto-Problem-set/Binary Search/BinarySearch.java | Binary Search | On sorted data, one comparison safely removes half the range. |
 | Pareto-Problem-set/Binary Search/FindMinInArr.java | Binary Search | Compare mid with right to detect whether minimum is in left or right side. |
 | Pareto-Problem-set/Binary Search/FindMinInArrRepeated.java | Binary Search with Duplicates | If mid equals right, reduce right by one to remove ambiguity without losing minimum. |
-| Pareto-Problem-set/Binary Search/FindNumInRotArr.java | Rotated Binary Search | One half is always sorted; choose by checking target range boundaries. |
+| Pareto-Problem-set/Binary Search/SearchNumInRotArr.java | Rotated Binary Search | One half is always sorted; choose by checking target range boundaries. |
+| Pareto-Problem-set/Linked List/Merge2SortList.java | Linked List Merge | Always attach smaller head node to keep merged list sorted. |
+| Pareto-Problem-set/Linked List/RemoveNthNodeEnd.java | Two Pointers on Linked List | Keep n+1 gap, then delete node after slow pointer. |
 | Pareto-Problem-set/Linked List/ReorderList.java | Linked List Split-Reverse-Merge | Find middle, reverse second half, then alternate nodes from first and second lists. |
+| Pareto-Problem-set/Linked List/ReverseList.java | Linked List Iteration | Save next, reverse current link, then move forward. |
 | Pareto-Problem-set/Sliding Window/LongRepeating.java | Sliding Window | Keep window where windowLen - maxFreq <= k; shrink when replacements exceed k. |
 | Pareto-Problem-set/Sliding Window/MaxProfitStock.java | One Pass / Two Pointers | Best sell today is based only on minimum buy seen before today. |
 | Pareto-Problem-set/Sliding Window/UniqeSubStringLen.java | Sliding Window + HashSet | Expand right, and remove from left until the window becomes unique again. |
+| Pareto-Problem-set/Stack/DailyTemp.java | Monotonic Stack | Resolve colder days when a warmer day appears. |
+| Pareto-Problem-set/Stack/MinStack.java | Dual Stack | Main stack stores values, min stack stores minimum history. |
 | Pareto-Problem-set/Stack/ValidParanthesis.java | Stack | Closing bracket must match the most recent unmatched opening bracket. |
-| Pareto-Problem-set/Two Pointers/TwoSum.java | Two Pointers | In sorted arrays, moving left increases sum and moving right decreases sum. |
+| Pareto-Problem-set/Two Pointers/ContainsMostWater.java | Two Pointers | Compute area and move the shorter wall to search better height. |
+| Pareto-Problem-set/Two Pointers/ThreeSum.java | Sorting + Two Pointers | Fix one number, then run two-sum with duplicate skipping. |
+| Pareto-Problem-set/Two Pointers/TwoSum2.java | Two Pointers | In sorted arrays, moving left increases sum and moving right decreases sum. |
 | Pareto-Problem-set/Two Pointers/ValidPalindrome.java | Normalization / Two Pointers | Remove irrelevant chars and case first, then palindrome check becomes direct. |
 | Math Quest/DivByK.java | Modular Arithmetic | Track only remainder of repunit; remainder 0 means divisible. |
 | Math Quest/PalindromeNum.java | Math Reverse Half | Reverse only half digits to compare mirrored halves efficiently. |

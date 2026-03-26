@@ -52,3 +52,25 @@ class ValidPalindrome {
         System.out.println("Is palindrome: " + result);
     }
 }
+
+
+
+
+
+
+
+//runtime 2ms
+// public class ValidPalindrome {
+//     public boolean isPalindrome(String s) {
+//         String newString = s.toLowerCase();
+//         int i = 0, j = newString.length() - 1;
+//         while(i < j) {
+//             while(i < j && !Character.isLetterOrDigit(newString.charAt(i))) i++;
+//             while(i < j && !Character.isLetterOrDigit(newString.charAt(j))) j--;
+//             if(newString.charAt(i) != newString.charAt(j)) return false;
+//             i++;
+//             j--;
+//         }
+//         return true;
+//     }
+// }
