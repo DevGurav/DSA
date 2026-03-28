@@ -15,6 +15,8 @@ Use this during interview prep:
 | Pareto-Problem-set/Binary Search/FindMinInArrRepeated.java | Binary Search with Duplicates | If mid equals right, reduce right by one to remove ambiguity without losing minimum. |
 | Pareto-Problem-set/Binary Search/SearchNumInRotArr.java | Rotated Binary Search | One half is always sorted; choose by checking target range boundaries. |
 | Pareto-Problem-set/Linked List/Merge2SortList.java | Linked List Merge | Always attach smaller head node to keep merged list sorted. |
+| Pareto-Problem-set/Linked List/ListCycle.java | Fast and Slow Pointers | If slow and fast pointers meet, cycle exists. |
+| Pareto-Problem-set/Linked List/LruCache.java | HashMap + Doubly Linked List | HashMap gives O(1) access, linked list tracks least-recently-used order. |
 | Pareto-Problem-set/Linked List/RemoveNthNodeEnd.java | Two Pointers on Linked List | Keep n+1 gap, then delete node after slow pointer. |
 | Pareto-Problem-set/Linked List/ReorderList.java | Linked List Split-Reverse-Merge | Find middle, reverse second half, then alternate nodes from first and second lists. |
 | Pareto-Problem-set/Linked List/ReverseList.java | Linked List Iteration | Save next, reverse current link, then move forward. |

@@ -8,5 +8,14 @@
   "editor.suggestOnTriggerCharacters": false,
   "editor.parameterHints.enabled": false,
   "editor.lightbulb.enabled": "off",
-  "github.copilot.enable": { "*": false }
+  "github.copilot.enable": { "*": false },
+  "java.project.sourcePaths": [
+    "."
+  ],
+  "java.import.exclusions": [
+    "**/*.md",
+    "**/*.pdf",
+    "**/*.docx"
+  ],
+  "java.project.outputPath": "bin"
 }
