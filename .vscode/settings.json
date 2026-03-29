@@ -10,7 +10,7 @@
   "editor.lightbulb.enabled": "off",
   "github.copilot.enable": { "*": false },
   "java.project.sourcePaths": [
-    "."
+    "src"
   ],
   "java.import.exclusions": [
     "**/*.md",

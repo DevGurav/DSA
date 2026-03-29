@@ -1,4 +1,4 @@
-
+﻿
 // Problem: LeetCode 141 - Linked List Cycle
 // Pattern: Fast and Slow Pointers (Floyd Cycle Detection)
 // Core idea: Move slow by 1 step and fast by 2 steps; if a cycle exists they must meet.
@@ -7,6 +7,13 @@
 // Dry run: 3->2->0->-4 with tail pointing to node 2 -> slow and fast eventually meet -> true.
 // Why this works: In a cycle, two pointers with different speeds cannot avoid collision forever.
 // Mental Trigger (simple): Slow walks, fast runs; if loop exists, runner catches walker.
+// When to use: Node-level rewiring/traversal problems with O(1) extra space goals.
+// Failure mode: Losing links during pointer updates or null checks in wrong order.
+// Input edge cases: Empty list, one node, two nodes, cycle present at head.
+// Brute -> Optimal jump: Avoid arrays; use pointer choreography (dummy/slow-fast/prev-curr).
+// Invariant break test: Processed part remains valid and unprocessed part stays reachable.
+// Complexity trigger: Single traversal with constant auxiliary pointers.
+// Common variant: reverse segment, detect cycle, merge/reorder by pointers.
 // Flow Dry Run (same order as code below):
 // A) Guard null head.
 // B) Initialize slow=head, fast=head.next.
@@ -46,3 +53,4 @@ class ListNode {
         next = null;
     }
 }
+

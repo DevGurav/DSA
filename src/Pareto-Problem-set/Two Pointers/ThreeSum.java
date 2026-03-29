@@ -1,4 +1,4 @@
-// Problem: LeetCode 15 - 3Sum
+﻿// Problem: LeetCode 15 - 3Sum
 // Pattern: Sorting + Two Pointers
 // Core idea: Fix one number, then use two pointers to find remaining pair summing to negative fixed value.
 // Invariant: Sorted order allows monotonic pointer movement and duplicate skipping for unique triplets.
@@ -6,6 +6,13 @@
 // Dry run: [-1,0,1,2,-1,-4] -> sorted [-4,-1,-1,0,1,2] -> triplets [-1,-1,2], [-1,0,1].
 // Why this works: For each fixed i, two-sum-on-sorted-array finds all valid pairs without missing combinations.
 // Mental Trigger (simple): Sort once, lock one value, and squeeze left/right pointers to hit sum zero.
+// When to use: Relative movement from ends/speeds can eliminate candidates quickly.
+// Failure mode: Pointer movement rule inconsistent with objective, skipping valid answers.
+// Input edge cases: Very short input, duplicates, already optimal at boundaries.
+// Brute -> Optimal jump: Replace pair enumeration with coordinated pointer moves.
+// Invariant break test: Eliminated region cannot contain a better/valid answer.
+// Complexity trigger: Each pointer advances monotonically, yielding linear time.
+// Common variant: opposite-end scan, fast-slow cycle/middle detection, partitioning.
 // Flow Dry Run (same order as code below):
 // A) Sort array.
 // B) Fix i, skip duplicate anchors.
@@ -50,3 +57,4 @@ public class ThreeSum {
         return result;
     }
 }
+

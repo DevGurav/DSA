@@ -1,4 +1,4 @@
-// Problem: LeetCode 217 - Contains Duplicate
+﻿// Problem: LeetCode 217 - Contains Duplicate
 // Pattern: HashSet
 // Core idea: Add each number into set; if already present, duplicate exists.
 // Invariant: Set contains unique elements seen so far.
@@ -6,6 +6,13 @@
 // Dry run: [1,2,3,1] -> when reading last 1, set already has 1 -> true.
 // Why this works: HashSet membership check is fast and directly answers "seen before?".
 // Mental Trigger (simple): If add fails because number already seen, duplicate is found instantly.
+// When to use: Need O(1) average lookups for seen/complement/frequency checks.
+// Failure mode: Duplicate handling mistakes (storing before checking can pair same index incorrectly).
+// Input edge cases: Empty array, no solution, duplicate values, negative numbers.
+// Brute -> Optimal jump: Replace nested scans with one-pass HashMap/HashSet bookkeeping.
+// Invariant break test: Map/set reflects exactly the prefix processed so far.
+// Complexity trigger: One pass with constant-time map operations dominates runtime.
+// Common variant: frequency map counting, anagram grouping, prefix-hash lookups.
 // Flow Dry Run (same order as code below):
 // A) Start empty set.
 // B) Read each number.
@@ -80,3 +87,4 @@ public class ContainsDuplicate {
 //         return false;
 //     }
 // }
+

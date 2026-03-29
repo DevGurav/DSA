@@ -1,4 +1,4 @@
-// Problem: LeetCode 121 - Best Time to Buy and Sell Stock
+﻿// Problem: LeetCode 121 - Best Time to Buy and Sell Stock
 // Pattern: Two Pointers / One Pass
 // Core idea: Track lowest buy index so far and update max profit using current sell day.
 // Invariant: i always points to best buy day seen before current j.
@@ -6,6 +6,13 @@
 // Dry run: [7,1,5,3,6,4] -> best profit updates to 5 (buy 1, sell 6).
 // Why this works: Optimal sell on day j only depends on minimum price before j.
 // Mental Trigger (simple): Keep cheapest buy seen so far, and at each day ask: if I sell today, is profit best yet?
+// When to use: Need optimal subarray/substring over contiguous range.
+// Failure mode: Expanding/shrinking conditions out of sync with window state.
+// Input edge cases: Empty string/array, all same chars, k=0, window larger than input.
+// Brute -> Optimal jump: Replace restarting scans with rolling expand-contract window.
+// Invariant break test: Window always satisfies validity rule after adjustment.
+// Complexity trigger: Each index enters/leaves window at most once (amortized O(n)).
+// Common variant: fixed-size window sum vs variable-size constraint windows.
 // Flow Dry Run (same order as code below):
 // A) Start i=0, j=1, maxprofit=0.
 // B) If prices[j] < prices[i], shift i to j as better buy day.
@@ -78,3 +85,4 @@ class MaxProfitStock {
 //         return max_profit;
 //     }
 // }
+

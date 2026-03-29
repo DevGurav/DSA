@@ -1,4 +1,4 @@
-// Problem: LeetCode 3 - Longest Substring Without Repeating Characters
+﻿// Problem: LeetCode 3 - Longest Substring Without Repeating Characters
 // Pattern: Sliding Window + HashSet
 // Core idea: Expand right; while duplicate exists, remove from left until window is unique.
 // Invariant: Set always matches characters currently inside the window and contains no duplicates.
@@ -6,6 +6,13 @@
 // Dry run: "abcabcbb" -> best unique windows: "a","ab","abc" -> answer 3.
 // Why this works: Each character enters and leaves window at most once, maintaining maximal valid windows.
 // Mental Trigger (simple): Grow window with unique chars; when duplicate appears, shrink from left until clean again.
+// When to use: Need optimal subarray/substring over contiguous range.
+// Failure mode: Expanding/shrinking conditions out of sync with window state.
+// Input edge cases: Empty string/array, all same chars, k=0, window larger than input.
+// Brute -> Optimal jump: Replace restarting scans with rolling expand-contract window.
+// Invariant break test: Window always satisfies validity rule after adjustment.
+// Complexity trigger: Each index enters/leaves window at most once (amortized O(n)).
+// Common variant: fixed-size window sum vs variable-size constraint windows.
 // Flow Dry Run (same order as code below):
 // A) Start with empty set, left=0, maxLength=0.
 // B) For each right, shrink left while duplicate exists.
@@ -44,3 +51,4 @@ class UniqeSubStringLen {
         System.out.println(result);
     }
 }    
+

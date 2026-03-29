@@ -1,4 +1,4 @@
-// Problem: LeetCode 21 - Merge Two Sorted Lists
+﻿// Problem: LeetCode 21 - Merge Two Sorted Lists
 // Pattern: Linked List Merge
 // Core idea: Repeatedly attach smaller current node from two sorted lists.
 // Invariant: Merged list remains sorted after every attachment.
@@ -6,6 +6,13 @@
 // Dry run: [1,2,4] + [1,3,4] -> 1,1,2,3,4,4.
 // Why this works: Choosing smaller head each time is locally optimal and globally preserves sorted order.
 // Mental Trigger (simple): Compare two list heads, attach smaller one, move that list forward.
+// When to use: Node-level rewiring/traversal problems with O(1) extra space goals.
+// Failure mode: Losing links during pointer updates or null checks in wrong order.
+// Input edge cases: Empty list, one node, two nodes, cycle present at head.
+// Brute -> Optimal jump: Avoid arrays; use pointer choreography (dummy/slow-fast/prev-curr).
+// Invariant break test: Processed part remains valid and unprocessed part stays reachable.
+// Complexity trigger: Single traversal with constant auxiliary pointers.
+// Common variant: reverse segment, detect cycle, merge/reorder by pointers.
 // Flow Dry Run (same order as code below):
 // A) Start dummy and current pointer.
 // B) While both lists non-empty, attach smaller node and move pointers.
@@ -60,3 +67,4 @@ public class Merge2SortList {
 
     }
 }
+

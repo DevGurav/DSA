@@ -1,4 +1,4 @@
-// Problem: LeetCode 153 - Find Minimum in Rotated Sorted Array
+﻿// Problem: LeetCode 153 - Find Minimum in Rotated Sorted Array
 // Pattern: Binary Search
 // Core idea: Compare mid with right to decide which side contains rotation minimum.
 // Invariant: The minimum element always remains inside [left, right].
@@ -6,6 +6,13 @@
 // Dry run: [4,5,6,7,0,1,2] -> move left/right by mid-right comparison -> reach 0.
 // Why this works: One side is sorted each step; the unsorted side must contain the pivot/minimum.
 // Mental Trigger (simple): Compare mid with right; the side that looks broken contains the smallest value.
+// When to use: Search space is monotonic (predicate flips once) or sorted order exists.
+// Failure mode: Wrong boundary updates causing infinite loops or missing answer.
+// Input edge cases: Single element, all true/all false predicates, duplicate keys.
+// Brute -> Optimal jump: Replace linear scan with boundary narrowing using mid.
+// Invariant break test: Answer always remains inside [lo, hi] after each update.
+// Complexity trigger: Interval halves each step, giving logarithmic iterations.
+// Common variant: lower_bound/upper_bound and answer-space binary search.
 // Flow Dry Run (same order as code below):
 // A) left=0, right=6, mid=3 -> nums[mid]=7 > nums[right]=2, move left to right side.
 // B) left=4, right=6, mid=5 -> nums[mid]=1 <= nums[right]=2, move right=5.
@@ -61,3 +68,4 @@ class FindMinInArr {
 //         System.out.print(obj.findMin(nums));
 //     }
 // }
+

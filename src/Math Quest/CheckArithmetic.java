@@ -1,4 +1,4 @@
-// Problem: LeetCode 1502 - Can Make Arithmetic Progression From Sequence
+﻿// Problem: LeetCode 1502 - Can Make Arithmetic Progression From Sequence
 // Pattern: Math + Hashing by Position
 // Core idea: Use min/max to compute expected difference, then verify every value fits a valid arithmetic slot.
 // Invariant: Every number must map to one unique index in progression formula (arr[i]-min)/diff.
@@ -6,6 +6,13 @@
 // Dry run: [1,3,5,7] -> min=1, max=7, diff=2, indices 0,1,2,3 all unique -> true.
 // Why this works: Arithmetic progression is fully determined by min, max, and diff; valid mapping confirms exact structure.
 // Mental Trigger (simple): Fix start and step; every number must land exactly once on its expected step position.
+// When to use: Use for math/combinatorics problems where formulas or numeric properties simplify search.
+// Failure mode: Off-by-one indexing (especially 1-based vs 0-based) and overflow in intermediate math.
+// Input edge cases: n=0/1, repeated values, large bounds, divisibility corner cases.
+// Brute -> Optimal jump: Replace full enumeration with formula/modulo/factorial reasoning.
+// Invariant break test: Each step should preserve the mathematical relation used by the algorithm.
+// Complexity trigger: Work per state is constant with reduced state space from math insight.
+// Common variant: prove feasibility first, then construct answer directly.
 // Flow Dry Run (same order as code below):
 // A) Scan array to find min and max.
 // B) Compute diff=(max-min)/(n-1), reject if not divisible.

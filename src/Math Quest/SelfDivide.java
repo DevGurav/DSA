@@ -1,4 +1,4 @@
-// Problem: LeetCode 728 - Self Dividing Numbers
+﻿// Problem: LeetCode 728 - Self Dividing Numbers
 // Pattern: Digit Extraction
 // Core idea: For each number, test every digit: non-zero and divides original number.
 // Invariant: Number is valid iff all extracted digits pass both checks.
@@ -6,6 +6,13 @@
 // Dry run: 36 -> digits 6 and 3 both divide 36 -> include 36.
 // Why this works: Base-10 decomposition checks exactly the local condition required for every digit.
 // Mental Trigger (simple): Every digit must be non-zero and must divide the full number without remainder.
+// When to use: Use for math/combinatorics problems where formulas or numeric properties simplify search.
+// Failure mode: Off-by-one indexing (especially 1-based vs 0-based) and overflow in intermediate math.
+// Input edge cases: n=0/1, repeated values, large bounds, divisibility corner cases.
+// Brute -> Optimal jump: Replace full enumeration with formula/modulo/factorial reasoning.
+// Invariant break test: Each step should preserve the mathematical relation used by the algorithm.
+// Complexity trigger: Work per state is constant with reduced state space from math insight.
+// Common variant: prove feasibility first, then construct answer directly.
 // Flow Dry Run (same order as code below):
 // A) Pick num=36, set x=36, flag=true.
 // B) digit=6 -> valid (36%6==0), update x=3.

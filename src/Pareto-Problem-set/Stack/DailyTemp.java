@@ -1,4 +1,4 @@
-// Problem: LeetCode 739 - Daily Temperatures
+﻿// Problem: LeetCode 739 - Daily Temperatures
 // Pattern: Monotonic Stack (decreasing temperatures)
 // Core idea: Store indices of unresolved days; when warmer day appears, resolve waiting days.
 // Invariant: Stack indices always point to temperatures in decreasing order.
@@ -6,6 +6,13 @@
 // Dry run: [73,74,75,71,69,72,76,73] -> answers [1,1,4,2,1,1,0,0].
 // Why this works: Each index is pushed once and popped once when next warmer day is found.
 // Mental Trigger (simple): Stack keeps days still waiting for a warmer day; current warmer day clears them.
+// When to use: Need nearest previous/next relation or properly nested structure checks.
+// Failure mode: Pop conditions ordered incorrectly, causing missed matches.
+// Input edge cases: Empty input, all increasing/decreasing values, unmatched symbols.
+// Brute -> Optimal jump: Replace repeated backward checks with monotonic stack/history stack.
+// Invariant break test: Stack ordering/property holds after every push/pop.
+// Complexity trigger: Each element pushed and popped at most once.
+// Common variant: monotonic stack for spans/next greater; bracket validation stack.
 // Flow Dry Run (same order as code below):
 // A) Iterate each day index i.
 // B) While current temperature is warmer than stack top day, pop and fill answer.
@@ -74,3 +81,4 @@ public class DailyTemp {
 //         return result;
 //     }
 // }
+

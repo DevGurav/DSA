@@ -1,4 +1,4 @@
-// Problem: LeetCode 143 - Reorder List
+﻿// Problem: LeetCode 143 - Reorder List
 // Pattern: Linked List (Find Middle + Reverse + Merge)
 // Core idea: Split list in half, reverse second half, then merge alternately.
 // Invariant: During merge, first part order is preserved and second part contributes nodes in reverse order.
@@ -6,6 +6,13 @@
 // Dry run: 1->2->3->4->5 -> split 1->2->3 and 4->5, reverse to 5->4, merge => 1->5->2->4->3.
 // Why this works: Alternating front-half nodes with reversed back-half nodes exactly creates required order L0, Ln, L1, Ln-1.
 // Mental Trigger (simple): Find middle, reverse back half, then zip front and back nodes one by one.
+// When to use: Node-level rewiring/traversal problems with O(1) extra space goals.
+// Failure mode: Losing links during pointer updates or null checks in wrong order.
+// Input edge cases: Empty list, one node, two nodes, cycle present at head.
+// Brute -> Optimal jump: Avoid arrays; use pointer choreography (dummy/slow-fast/prev-curr).
+// Invariant break test: Processed part remains valid and unprocessed part stays reachable.
+// Complexity trigger: Single traversal with constant auxiliary pointers.
+// Common variant: reverse segment, detect cycle, merge/reorder by pointers.
 // Flow Dry Run (same order as code below):
 // A) slow/fast find middle at node 3.
 // B) Cut after middle, reverse second half (4->5 becomes 5->4).
@@ -85,3 +92,4 @@ public class ReorderList {
         }
     }
 }
+

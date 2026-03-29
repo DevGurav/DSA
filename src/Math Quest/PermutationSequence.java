@@ -9,6 +9,13 @@ import java.util.ArrayList;
 // Dry run: n=4, k=9 -> picks 2,3,1,4 -> answer "2314".
 // Why this works: Permutations are grouped in equal factorial-sized blocks by first digit, then second, and so on.
 // Mental Trigger (simple): Use k to jump block-by-block, pick digit, remove it, continue with remaining digits.
+// When to use: Use for math/combinatorics problems where formulas or numeric properties simplify search.
+// Failure mode: Off-by-one indexing (especially 1-based vs 0-based) and overflow in intermediate math.
+// Input edge cases: n=0/1, repeated values, large bounds, divisibility corner cases.
+// Brute -> Optimal jump: Replace full enumeration with formula/modulo/factorial reasoning.
+// Invariant break test: Each step should preserve the mathematical relation used by the algorithm.
+// Complexity trigger: Work per state is constant with reduced state space from math insight.
+// Common variant: prove feasibility first, then construct answer directly.
 // Flow Dry Run (same order as code below):
 // A) Build numbers=[1..n] and factorial array.
 // B) Convert k to zero-based index (k--).
@@ -64,7 +71,7 @@ public class PermutationSequence {
         System.out.print(obj.getPermutation(4,9));
     }
 }
-// ↑ runtime 1ms
+// ^ runtime 1ms
 
 
 

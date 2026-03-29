@@ -1,4 +1,4 @@
-// Problem: LeetCode 125 - Valid Palindrome
+﻿// Problem: LeetCode 125 - Valid Palindrome
 // Pattern: Two Pointers / String Normalization
 // Core idea: Keep only alphanumeric chars in lowercase, then compare with reversed cleaned string.
 // Invariant: If cleaned string equals its reverse, the original string is palindrome under problem rules.
@@ -6,6 +6,13 @@
 // Dry run: "A man, a plan, a canal: Panama" -> "amanaplanacanalpanama" -> equals reverse -> true.
 // Why this works: Normalization removes all irrelevant differences, so equality check reflects true palindrome structure.
 // Mental Trigger (simple): Ignore spaces/symbols/case first, then check if text reads same forward and backward.
+// When to use: Relative movement from ends/speeds can eliminate candidates quickly.
+// Failure mode: Pointer movement rule inconsistent with objective, skipping valid answers.
+// Input edge cases: Very short input, duplicates, already optimal at boundaries.
+// Brute -> Optimal jump: Replace pair enumeration with coordinated pointer moves.
+// Invariant break test: Eliminated region cannot contain a better/valid answer.
+// Complexity trigger: Each pointer advances monotonically, yielding linear time.
+// Common variant: opposite-end scan, fast-slow cycle/middle detection, partitioning.
 // Flow Dry Run (same order as code below):
 // A) Normalize input to cleaned lowercase alphanumeric string.
 // B) Build reverse string from cleaned.
@@ -74,3 +81,4 @@ class ValidPalindrome {
 //         return true;
 //     }
 // }
+

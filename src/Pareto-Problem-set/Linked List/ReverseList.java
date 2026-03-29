@@ -1,4 +1,4 @@
-// Problem: LeetCode 206 - Reverse Linked List
+﻿// Problem: LeetCode 206 - Reverse Linked List
 // Pattern: Linked List Iteration
 // Core idea: Reverse pointers one by one using prev, curr, and nextNode.
 // Invariant: prev always points to already-reversed prefix, curr points to next node to process.
@@ -6,6 +6,13 @@
 // Dry run: 1->2->3->null -> after loop becomes 3->2->1->null.
 // Why this works: Each node's next pointer is redirected exactly once while preserving forward traversal with nextNode.
 // Mental Trigger (simple): Save next, flip arrow, move forward; repeat until end.
+// When to use: Node-level rewiring/traversal problems with O(1) extra space goals.
+// Failure mode: Losing links during pointer updates or null checks in wrong order.
+// Input edge cases: Empty list, one node, two nodes, cycle present at head.
+// Brute -> Optimal jump: Avoid arrays; use pointer choreography (dummy/slow-fast/prev-curr).
+// Invariant break test: Processed part remains valid and unprocessed part stays reachable.
+// Complexity trigger: Single traversal with constant auxiliary pointers.
+// Common variant: reverse segment, detect cycle, merge/reorder by pointers.
 // Flow Dry Run (same order as code below):
 // A) prev=null, curr=head.
 // B) Save next node.
@@ -49,3 +56,4 @@ public class ReverseList {
         return prev;
     }
 }
+

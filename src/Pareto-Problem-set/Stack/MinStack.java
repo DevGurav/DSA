@@ -1,4 +1,4 @@
-// Problem: LeetCode 155 - Min Stack
+﻿// Problem: LeetCode 155 - Min Stack
 // Pattern: Stack + Auxiliary Min Stack
 // Core idea: Normal stack stores all values; minStack stores current minimum history.
 // Invariant: Top of minStack is always minimum of current stack.
@@ -6,6 +6,13 @@
 // Dry run: push -2,0,-3 -> min=-3; pop -> top=0, min=-2.
 // Why this works: Every minimum candidate is tracked in sync, so minimum retrieval never needs full scan.
 // Mental Trigger (simple): Keep a second stack of minima; whenever value is new minimum, push it there too.
+// When to use: Need nearest previous/next relation or properly nested structure checks.
+// Failure mode: Pop conditions ordered incorrectly, causing missed matches.
+// Input edge cases: Empty input, all increasing/decreasing values, unmatched symbols.
+// Brute -> Optimal jump: Replace repeated backward checks with monotonic stack/history stack.
+// Invariant break test: Stack ordering/property holds after every push/pop.
+// Complexity trigger: Each element pushed and popped at most once.
+// Common variant: monotonic stack for spans/next greater; bracket validation stack.
 // Flow Dry Run (same order as code below):
 // A) push: add value to main stack, also to minStack if <= current min.
 // B) pop: if popped value equals minStack top, pop minStack too.
@@ -42,3 +49,4 @@ public class MinStack {
         return minStack.peek();
     }
 }
+

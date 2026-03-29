@@ -1,4 +1,4 @@
-// Problem: LeetCode 1015 - Smallest Integer Divisible by K
+﻿// Problem: LeetCode 1015 - Smallest Integer Divisible by K
 // Pattern: Math / Modular Arithmetic
 // Core idea: Build repunit remainders iteratively: rem = (rem*10 + 1) % k.
 // Invariant: If remainder becomes 0 at length L, repunit of length L is divisible by k.
@@ -6,6 +6,13 @@
 // Dry run: k=3 -> remainders 1, 2, 0 -> answer length is 3.
 // Why this works: Modulo tracks divisibility state exactly, avoiding huge number construction.
 // Mental Trigger (simple): Keep only remainder while building 1, 11, 111...; first time remainder becomes 0, answer is length.
+// When to use: Use for math/combinatorics problems where formulas or numeric properties simplify search.
+// Failure mode: Off-by-one indexing (especially 1-based vs 0-based) and overflow in intermediate math.
+// Input edge cases: n=0/1, repeated values, large bounds, divisibility corner cases.
+// Brute -> Optimal jump: Replace full enumeration with formula/modulo/factorial reasoning.
+// Invariant break test: Each step should preserve the mathematical relation used by the algorithm.
+// Complexity trigger: Work per state is constant with reduced state space from math insight.
+// Common variant: prove feasibility first, then construct answer directly.
 // Flow Dry Run (same order as code below):
 // A) Start: k=3, remainder=0.
 // B) len=1 -> remainder=(0*10+1)%3=1.

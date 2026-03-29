@@ -1,4 +1,4 @@
-// Problem: LeetCode 167 - Two Sum II (Input Array Is Sorted)
+﻿// Problem: LeetCode 167 - Two Sum II (Input Array Is Sorted)
 // Pattern: Two Pointers
 // Core idea: Start at both ends and move pointers based on current sum vs target.
 // Invariant: At each step, discarded pairs cannot become valid because array is sorted.
@@ -6,6 +6,13 @@
 // Dry run: [-10,-8,-2,1,2,5,6], target=0 -> move pointers -> (-2,2) found.
 // Why this works: Sorting gives monotonic control; moving one pointer strictly increases or decreases the sum.
 // Mental Trigger (simple): Small sum? move left rightward. Big sum? move right leftward. Sorted array guarantees this direction works.
+// When to use: Relative movement from ends/speeds can eliminate candidates quickly.
+// Failure mode: Pointer movement rule inconsistent with objective, skipping valid answers.
+// Input edge cases: Very short input, duplicates, already optimal at boundaries.
+// Brute -> Optimal jump: Replace pair enumeration with coordinated pointer moves.
+// Invariant break test: Eliminated region cannot contain a better/valid answer.
+// Complexity trigger: Each pointer advances monotonically, yielding linear time.
+// Common variant: opposite-end scan, fast-slow cycle/middle detection, partitioning.
 // Flow Dry Run (same order as code below):
 // A) Initialize left at start and right at end.
 // B) Compute sum of both pointers.
@@ -44,3 +51,4 @@ public class TwoSum2
         System.out.print("index are "+loc[0] +" "+ loc[1]);
     }
 }
+

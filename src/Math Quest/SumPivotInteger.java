@@ -6,6 +6,13 @@
 // Dry run: n=8 -> i=6 gives left=21 and right=21 -> return 6.
 // Why this works: Formula-based sums are exact, so equality directly verifies pivot definition.
 // Mental Trigger (simple): Try each center value i and compare left sum and right sum formulas; equal means pivot found.
+// When to use: Use for math/combinatorics problems where formulas or numeric properties simplify search.
+// Failure mode: Off-by-one indexing (especially 1-based vs 0-based) and overflow in intermediate math.
+// Input edge cases: n=0/1, repeated values, large bounds, divisibility corner cases.
+// Brute -> Optimal jump: Replace full enumeration with formula/modulo/factorial reasoning.
+// Invariant break test: Each step should preserve the mathematical relation used by the algorithm.
+// Complexity trigger: Work per state is constant with reduced state space from math insight.
+// Common variant: prove feasibility first, then construct answer directly.
 // Flow Dry Run (same order as code below):
 // A) Start n=8.
 // B) i=2 -> lsum=3, rsum=35 (not equal), continue.
@@ -62,7 +69,7 @@ public class SumPivotInteger {
 //         int root = (int) Math.sqrt(p);
 
 //         // Step 3: Check if p is a perfect square
-//         // If root * root == p → perfect square
+//         // If root * root == p -> perfect square
 //         if (root * root == p) {
 //             // Step 4: Return root as pivot integer
 //             return root;

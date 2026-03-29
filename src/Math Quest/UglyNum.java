@@ -1,4 +1,4 @@
-// Problem: LeetCode 263 - Ugly Number
+﻿// Problem: LeetCode 263 - Ugly Number
 // Pattern: Math / Repeated Division
 // Core idea: Repeatedly divide n by 2, 3, and 5 whenever possible.
 // Invariant: If n has only allowed prime factors, divisions eventually reduce it to 1.
@@ -6,6 +6,13 @@
 // Dry run: 60 -> 30 -> 15 -> 5 -> 1, so answer is true.
 // Why this works: Every valid factor is removed; any leftover >1 means a forbidden prime factor exists.
 // Mental Trigger (simple): Keep dividing by 2, 3, 5 only; if you can reduce to 1, number is ugly.
+// When to use: Use for math/combinatorics problems where formulas or numeric properties simplify search.
+// Failure mode: Off-by-one indexing (especially 1-based vs 0-based) and overflow in intermediate math.
+// Input edge cases: n=0/1, repeated values, large bounds, divisibility corner cases.
+// Brute -> Optimal jump: Replace full enumeration with formula/modulo/factorial reasoning.
+// Invariant break test: Each step should preserve the mathematical relation used by the algorithm.
+// Complexity trigger: Work per state is constant with reduced state space from math insight.
+// Common variant: prove feasibility first, then construct answer directly.
 // Flow Dry Run (same order as code below):
 // A) Start n=60.
 // B) Divide by 2 repeatedly: 60 -> 30 -> 15.

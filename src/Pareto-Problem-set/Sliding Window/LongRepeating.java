@@ -1,4 +1,4 @@
-// Problem: LeetCode 424 - Longest Repeating Character Replacement
+﻿// Problem: LeetCode 424 - Longest Repeating Character Replacement
 // Pattern: Sliding Window
 // Core idea: Keep largest valid window where replacements needed does not exceed k.
 // Invariant: Window is valid when (window length - maxFreqInWindow) <= k.
@@ -6,6 +6,13 @@
 // Dry run: "AABABBA", k=1 -> max valid length encountered is 4.
 // Why this works: maxFreqInWindow captures the dominant char, so difference gives exact replacements needed.
 // Mental Trigger (simple): Keep a window where non-majority letters are at most k; if too many, move left.
+// When to use: Need optimal subarray/substring over contiguous range.
+// Failure mode: Expanding/shrinking conditions out of sync with window state.
+// Input edge cases: Empty string/array, all same chars, k=0, window larger than input.
+// Brute -> Optimal jump: Replace restarting scans with rolling expand-contract window.
+// Invariant break test: Window always satisfies validity rule after adjustment.
+// Complexity trigger: Each index enters/leaves window at most once (amortized O(n)).
+// Common variant: fixed-size window sum vs variable-size constraint windows.
 // Flow Dry Run (same order as code below):
 // A) Initialize freq[], left=0, maxFreqInWindow=0, bestLength=0.
 // B) Expand right, update char frequency and maxFreqInWindow.
@@ -93,3 +100,4 @@ class LongRepeating {
     }
 }
 */
+

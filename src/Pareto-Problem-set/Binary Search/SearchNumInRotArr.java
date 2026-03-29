@@ -1,4 +1,4 @@
-// Problem: LeetCode 33 - Search in Rotated Sorted Array
+﻿// Problem: LeetCode 33 - Search in Rotated Sorted Array
 // Pattern: Binary Search on Rotated Array
 // Core idea: Identify sorted half first, then check whether target lies inside that half.
 // Invariant: Target, if present, always remains in the chosen search interval.
@@ -6,6 +6,13 @@
 // Dry run: [4,5,6,7,0,1,2], target=0 -> narrow to right sorted half -> find index 4.
 // Why this works: At least one half is sorted each step, enabling safe elimination of the other half.
 // Mental Trigger (simple): First detect which half is sorted, then ask: is target inside that half? keep it, discard the other half.
+// When to use: Search space is monotonic (predicate flips once) or sorted order exists.
+// Failure mode: Wrong boundary updates causing infinite loops or missing answer.
+// Input edge cases: Single element, all true/all false predicates, duplicate keys.
+// Brute -> Optimal jump: Replace linear scan with boundary narrowing using mid.
+// Invariant break test: Answer always remains inside [lo, hi] after each update.
+// Complexity trigger: Interval halves each step, giving logarithmic iterations.
+// Common variant: lower_bound/upper_bound and answer-space binary search.
 // Flow Dry Run (same order as code below):
 // A) l=0, r=6, mid=3 -> left half sorted, target outside it, move l=4.
 // B) l=4, r=6, mid=5 -> left half sorted, target inside it, move r=4.
@@ -54,3 +61,4 @@ public class SearchNumInRotArr {
         return -1;
     }
 }
+

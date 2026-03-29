@@ -1,4 +1,4 @@
-// Problem: LeetCode 19 - Remove Nth Node From End of List
+﻿// Problem: LeetCode 19 - Remove Nth Node From End of List
 // Pattern: Linked List Two Pointers
 // Core idea: Keep first pointer n+1 steps ahead of second, then move both until first ends.
 // Invariant: Gap between first and second stays n+1, so second lands before node to remove.
@@ -6,6 +6,13 @@
 // Dry run: [1,2,3,4,5], n=2 -> second lands at 3, remove next (4).
 // Why this works: Fixed pointer gap transforms "nth from end" into direct next-node deletion.
 // Mental Trigger (simple): Create gap, move together, delete node after second.
+// When to use: Node-level rewiring/traversal problems with O(1) extra space goals.
+// Failure mode: Losing links during pointer updates or null checks in wrong order.
+// Input edge cases: Empty list, one node, two nodes, cycle present at head.
+// Brute -> Optimal jump: Avoid arrays; use pointer choreography (dummy/slow-fast/prev-curr).
+// Invariant break test: Processed part remains valid and unprocessed part stays reachable.
+// Complexity trigger: Single traversal with constant auxiliary pointers.
+// Common variant: reverse segment, detect cycle, merge/reorder by pointers.
 // Flow Dry Run (same order as code below):
 // A) Create dummy before head and set first=second=dummy.
 // B) Move first ahead n+1 times.
@@ -57,3 +64,4 @@ public class RemoveNthNodeEnd {
         return dummy.next;
     }
 }
+

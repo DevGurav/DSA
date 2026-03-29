@@ -1,4 +1,4 @@
-// Problem: LeetCode 154 - Find Minimum in Rotated Sorted Array II
+﻿// Problem: LeetCode 154 - Find Minimum in Rotated Sorted Array II
 // Pattern: Binary Search with Duplicates
 // Core idea: Compare mid with right; when equal, shrink right by one to break ambiguity.
 // Invariant: The minimum is never discarded from the current [l, r] interval.
@@ -6,6 +6,13 @@
 // Dry run input: [2,2,2,0,1]
 // Why this works: Strict comparisons locate pivot side, and r-- preserves correctness when duplicates hide order.
 // Mental Trigger (simple): Same as rotated minimum search, but when equal values confuse direction, drop one duplicate from right.
+// When to use: Search space is monotonic (predicate flips once) or sorted order exists.
+// Failure mode: Wrong boundary updates causing infinite loops or missing answer.
+// Input edge cases: Single element, all true/all false predicates, duplicate keys.
+// Brute -> Optimal jump: Replace linear scan with boundary narrowing using mid.
+// Invariant break test: Answer always remains inside [lo, hi] after each update.
+// Complexity trigger: Interval halves each step, giving logarithmic iterations.
+// Common variant: lower_bound/upper_bound and answer-space binary search.
 // Flow Dry Run (same order as code below):
 // A) Start: l=0, r=4.
 // B) Iteration 1: m=2, nums[m]=2, nums[r]=1 => nums[m] > nums[r], so l=m+1=3.
@@ -56,3 +63,4 @@ public class FindMinInArrRepeated {
         return nums[l];
     }    
 }
+

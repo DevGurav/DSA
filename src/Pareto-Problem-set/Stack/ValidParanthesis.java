@@ -1,4 +1,4 @@
-// Problem: LeetCode 20 - Valid Parentheses
+﻿// Problem: LeetCode 20 - Valid Parentheses
 // Pattern: Stack
 // Core idea: Push opening brackets; on closing bracket, top must be matching opener.
 // Invariant: Stack always stores unmatched opening brackets in correct order.
@@ -6,6 +6,13 @@
 // Dry run: "([{}])" -> push ( [ {, then pop on } ] ) -> stack empty -> true.
 // Why this works: Every close bracket must match the most recent unmatched opener (LIFO rule).
 // Mental Trigger (simple): Opening brackets go into stack; each closing bracket must close the latest opening one.
+// When to use: Need nearest previous/next relation or properly nested structure checks.
+// Failure mode: Pop conditions ordered incorrectly, causing missed matches.
+// Input edge cases: Empty input, all increasing/decreasing values, unmatched symbols.
+// Brute -> Optimal jump: Replace repeated backward checks with monotonic stack/history stack.
+// Invariant break test: Stack ordering/property holds after every push/pop.
+// Complexity trigger: Each element pushed and popped at most once.
+// Common variant: monotonic stack for spans/next greater; bracket validation stack.
 // Flow Dry Run (same order as code below):
 // A) Start with empty stack.
 // B) Push each opening bracket.
@@ -118,4 +125,5 @@ public class ValidParanthesis {
 //         return true;
 //     }
 // }
+
 

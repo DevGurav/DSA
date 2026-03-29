@@ -6,6 +6,13 @@
 // Dry run: s="ab", t="ba" -> +a,+b and -b,-a => all zeros -> true.
 // Why this works: Matching frequency vectors is equivalent to anagram equality.
 // Mental Trigger (simple): Add for first word, subtract for second word; if every letter balances to zero, both words use the same letters.
+// When to use: Need O(1) average lookups for seen/complement/frequency checks.
+// Failure mode: Duplicate handling mistakes (storing before checking can pair same index incorrectly).
+// Input edge cases: Empty array, no solution, duplicate values, negative numbers.
+// Brute -> Optimal jump: Replace nested scans with one-pass HashMap/HashSet bookkeeping.
+// Invariant break test: Map/set reflects exactly the prefix processed so far.
+// Complexity trigger: One pass with constant-time map operations dominates runtime.
+// Common variant: frequency map counting, anagram grouping, prefix-hash lookups.
 // Flow Dry Run (same order as code below):
 // A) Start count[26]=0.
 // B) i=0 -> +count['a'], -count['b'].
@@ -17,7 +24,7 @@ public class ValidAnagram {
     public boolean isAnagram(String s, String t)
     {
 
-        // Step 1: If lengths are different → cannot be anagram
+        // Step 1: If lengths are different -> cannot be anagram
         if (s.length() != t.length())
         {
             return false;
@@ -36,10 +43,10 @@ public class ValidAnagram {
             // s = "anagram"
             // t = "nagaram"
 
-            // For 'a' in s → +1
+            // For 'a' in s -> +1
             count[s.charAt(i) - 'a']++;
 
-            // For 'n' in t → -1
+            // For 'n' in t -> -1
             count[t.charAt(i) - 'a']--;
 
             // Invariant check: net frequency difference is tracked at each step.
@@ -48,19 +55,19 @@ public class ValidAnagram {
              Dry Run (first few steps):
 
              i = 0:
-             s[i] = 'a' → count['a']++
-             t[i] = 'n' → count['n']--
+             s[i] = 'a' -> count['a']++
+             t[i] = 'n' -> count['n']--
 
              i = 1:
-             s[i] = 'n' → count['n']++
-             t[i] = 'a' → count['a']--
+             s[i] = 'n' -> count['n']++
+             t[i] = 'a' -> count['a']--
 
-             → values cancel out if characters match in frequency
+             -> values cancel out if characters match in frequency
             */
         }
 
         // Step 4: Check if all counts are zero
-        // If yes → valid anagram
+        // If yes -> valid anagram
         // If any character has non-zero net count, strings differ.
         for (int c : count)
         {
@@ -96,17 +103,18 @@ public class ValidAnagram {
 // }
 
 // LOGIC:
-// Same length → use array[26]
-// s → increment, t → decrement
-// If all values = 0 → anagram
+// Same length -> use array[26]
+// s -> increment, t -> decrement
+// If all values = 0 -> anagram
 
 // s = "ab"
 // t = "ba"
 
-// count['a']++ → +1
-// count['b']-- → -1
+// count['a']++ -> +1
+// count['b']-- -> -1
 
-// count['b']++ → 0
-// count['a']-- → 0
+// count['b']++ -> 0
+// count['a']-- -> 0
 
-// Final array → all 0 → TRUE
+// Final array -> all 0 -> TRUE
+

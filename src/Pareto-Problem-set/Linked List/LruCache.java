@@ -1,4 +1,4 @@
-import java.util.HashMap; // import HashMap for quick key->node lookup
+﻿import java.util.HashMap; // import HashMap for quick key->node lookup
 import java.util.Map; // import Map interface for the node cache
 
 // Problem: LeetCode 146 - LRU Cache
@@ -9,6 +9,13 @@ import java.util.Map; // import Map interface for the node cache
 // Dry run: cap=2 -> put(1),put(2),get(1),put(3) evicts 2, put(4) evicts 1.
 // Why this works: Every access promotes node to head, and eviction always removes tail.prev (true LRU).
 // Mental Trigger (simple): Map finds node fast, list keeps order; use head for newest and tail for oldest.
+// When to use: Node-level rewiring/traversal problems with O(1) extra space goals.
+// Failure mode: Losing links during pointer updates or null checks in wrong order.
+// Input edge cases: Empty list, one node, two nodes, cycle present at head.
+// Brute -> Optimal jump: Avoid arrays; use pointer choreography (dummy/slow-fast/prev-curr).
+// Invariant break test: Processed part remains valid and unprocessed part stays reachable.
+// Complexity trigger: Single traversal with constant auxiliary pointers.
+// Common variant: reverse segment, detect cycle, merge/reorder by pointers.
 // Flow Dry Run (same order as code below):
 // A) get(key): miss -> -1, hit -> move node to head.
 // B) put(key,val): update existing and move to head, else insert new at head.
@@ -107,3 +114,4 @@ class LRUCache {
     }
 
 }
+

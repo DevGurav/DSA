@@ -1,4 +1,4 @@
-// Problem: LeetCode 9 - Palindrome Number
+﻿// Problem: LeetCode 9 - Palindrome Number
 // Pattern: Math / Reverse Half
 // Core idea: Reverse only the second half of digits, then compare with first half.
 // Invariant: For palindrome numbers, first half equals reversed second half (middle digit ignored for odd length).
@@ -6,6 +6,13 @@
 // Dry run: 1221 -> x becomes 12, reversedHalf becomes 12 -> true.
 // Why this works: Pairwise mirror digits are matched without full reversal, preserving correctness and efficiency.
 // Mental Trigger (simple): Reverse only the right half and compare both halves like a mirror.
+// When to use: Use for math/combinatorics problems where formulas or numeric properties simplify search.
+// Failure mode: Off-by-one indexing (especially 1-based vs 0-based) and overflow in intermediate math.
+// Input edge cases: n=0/1, repeated values, large bounds, divisibility corner cases.
+// Brute -> Optimal jump: Replace full enumeration with formula/modulo/factorial reasoning.
+// Invariant break test: Each step should preserve the mathematical relation used by the algorithm.
+// Complexity trigger: Work per state is constant with reduced state space from math insight.
+// Common variant: prove feasibility first, then construct answer directly.
 // Flow Dry Run (same order as code below):
 // A) Start: x=1221, reversedHalf=0.
 // B) Iteration 1 -> lastDigit=1, reversedHalf=1, x=122.
