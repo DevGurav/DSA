@@ -34,6 +34,7 @@ Use this during interview prep:
 | Pareto-Problem-set/Two Pointers/ValidPalindrome.java | Normalization / Two Pointers | Remove irrelevant chars and case first, then palindrome check becomes direct. |
 | src/Pareto-Problem-set/Tree/MaxDepth.java | Tree DFS (Recursion) | Depth = 1 + max(leftDepth, rightDepth) with null base case 0. |
 | src/Pareto-Problem-set/Tree/InvertBinaryTree.java | Tree BFS (Swap Children) | Traverse all nodes and swap left/right child pointers in-place. |
+| src/Pareto-Problem-set/Tree/DiameterBinaryTree.java | Tree DFS (Post-order) | At each node, update diameter with leftHeight + rightHeight. |
 | Math Quest/DivByK.java | Modular Arithmetic | Track only remainder of repunit; remainder 0 means divisible. |
 | Math Quest/PalindromeNum.java | Math Reverse Half | Reverse only half digits to compare mirrored halves efficiently. |
 | Math Quest/SelfDivide.java | Digit Extraction | Every digit must be non-zero and divide the original number. |
