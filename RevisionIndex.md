@@ -12,6 +12,7 @@ Use this during interview prep:
 | Pareto-Problem-set/ArrayHashing/ContainsDuplicate.java | HashSet | Return true as soon as a seen number appears again. |
 | src/Pareto-Problem-set/ArrayHashing/TwoSum.java | Array Hashing (HashMap) | For each number, check whether its required complement is already seen. |
 | src/Pareto-Problem-set/ArrayHashing/TopKFreEle.java | Array Hashing + Heap | Count frequencies, then pop top k keys from a max-heap. |
+| src/Pareto-Problem-set/ArrayHashing/GroupAnagram.java | Array Hashing (Canonical Key) | Sort each word to a key and group words with same key. |
 | Pareto-Problem-set/Binary Search/BinarySearch.java | Binary Search | On sorted data, one comparison safely removes half the range. |
 | Pareto-Problem-set/Binary Search/FindMinInArr.java | Binary Search | Compare mid with right to detect whether minimum is in left or right side. |
 | Pareto-Problem-set/Binary Search/FindMinInArrRepeated.java | Binary Search with Duplicates | If mid equals right, reduce right by one to remove ambiguity without losing minimum. |
