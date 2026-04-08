@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 217 - Contains Duplicate
+package paretoproblemset.ArrayHashing;
+
+// Problem: LeetCode 217 - Contains Duplicate
 // Pattern: HashSet
 // Core idea: Add each number into set; if already present, duplicate exists.
 // Invariant: Set contains unique elements seen so far.
@@ -19,7 +21,6 @@
 // C) If number already in set return true, else add it.
 // D) End without repeats -> return false.
 import java.util.HashSet;
-
 public class ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {
