@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 263 - Ugly Number
+package mathquest;
+
+// Problem: LeetCode 263 - Ugly Number
 // Pattern: Math / Repeated Division
 // Core idea: Repeatedly divide n by 2, 3, and 5 whenever possible.
 // Invariant: If n has only allowed prime factors, divisions eventually reduce it to 1.

@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 206 - Reverse Linked List
+package paretoproblemset.linkedlist;
+
+// Problem: LeetCode 206 - Reverse Linked List
 // Pattern: Linked List Iteration
 // Core idea: Reverse pointers one by one using prev, curr, and nextNode.
 // Invariant: prev always points to already-reversed prefix, curr points to next node to process.

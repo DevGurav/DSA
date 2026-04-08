@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 20 - Valid Parentheses
+package paretoproblemset.stack;
+
+// Problem: LeetCode 20 - Valid Parentheses
 // Pattern: Stack
 // Core idea: Push opening brackets; on closing bracket, top must be matching opener.
 // Invariant: Stack always stores unmatched opening brackets in correct order.

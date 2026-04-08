@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 9 - Palindrome Number
+package mathquest;
+
+// Problem: LeetCode 9 - Palindrome Number
 // Pattern: Math / Reverse Half
 // Core idea: Reverse only the second half of digits, then compare with first half.
 // Invariant: For palindrome numbers, first half equals reversed second half (middle digit ignored for odd length).

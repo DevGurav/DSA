@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 1015 - Smallest Integer Divisible by K
+package mathquest;
+
+// Problem: LeetCode 1015 - Smallest Integer Divisible by K
 // Pattern: Math / Modular Arithmetic
 // Core idea: Build repunit remainders iteratively: rem = (rem*10 + 1) % k.
 // Invariant: If remainder becomes 0 at length L, repunit of length L is divisible by k.

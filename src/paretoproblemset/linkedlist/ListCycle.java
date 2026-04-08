@@ -1,4 +1,5 @@
-﻿
+package paretoproblemset.linkedlist;
+
 // Problem: LeetCode 141 - Linked List Cycle
 // Pattern: Fast and Slow Pointers (Floyd Cycle Detection)
 // Core idea: Move slow by 1 step and fast by 2 steps; if a cycle exists they must meet.

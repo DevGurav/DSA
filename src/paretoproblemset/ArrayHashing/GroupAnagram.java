@@ -1,7 +1,9 @@
-import java.util.List;
-import java.util.HashMap;
+package paretoproblemset.arrayhashing;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 // Problem: LeetCode 49 - Group Anagrams
 // Pattern: Array Hashing (Canonical Key)

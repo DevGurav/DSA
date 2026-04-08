@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 15 - 3Sum
+package paretoproblemset.twopointers;
+
+// Problem: LeetCode 15 - 3Sum
 // Pattern: Sorting + Two Pointers
 // Core idea: Fix one number, then use two pointers to find remaining pair summing to negative fixed value.
 // Invariant: Sorted order allows monotonic pointer movement and duplicate skipping for unique triplets.

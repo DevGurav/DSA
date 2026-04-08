@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 739 - Daily Temperatures
+package paretoproblemset.stack;
+
+// Problem: LeetCode 739 - Daily Temperatures
 // Pattern: Monotonic Stack (decreasing temperatures)
 // Core idea: Store indices of unresolved days; when warmer day appears, resolve waiting days.
 // Invariant: Stack indices always point to temperatures in decreasing order.

@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 19 - Remove Nth Node From End of List
+package paretoproblemset.linkedlist;
+
+// Problem: LeetCode 19 - Remove Nth Node From End of List
 // Pattern: Linked List Two Pointers
 // Core idea: Keep first pointer n+1 steps ahead of second, then move both until first ends.
 // Invariant: Gap between first and second stays n+1, so second lands before node to remove.

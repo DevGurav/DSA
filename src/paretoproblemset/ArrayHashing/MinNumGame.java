@@ -1,3 +1,5 @@
+package paretoproblemset.arrayhashing;
+
 import java.util.Arrays;
 
 // Problem: LeetCode 2974 - Minimum Number Game

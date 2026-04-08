@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 155 - Min Stack
+package paretoproblemset.stack;
+
+// Problem: LeetCode 155 - Min Stack
 // Pattern: Stack + Auxiliary Min Stack
 // Core idea: Normal stack stores all values; minStack stores current minimum history.
 // Invariant: Top of minStack is always minimum of current stack.

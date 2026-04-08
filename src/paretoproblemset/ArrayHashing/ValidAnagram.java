@@ -1,3 +1,5 @@
+package paretoproblemset.arrayhashing;
+
 // Problem: LeetCode 242 - Valid Anagram
 // Pattern: Array Hashing (Frequency Count)
 // Core idea: Increment counts for s and decrement for t in one pass.

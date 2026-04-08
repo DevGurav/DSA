@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 728 - Self Dividing Numbers
+package mathquest;
+
+// Problem: LeetCode 728 - Self Dividing Numbers
 // Pattern: Digit Extraction
 // Core idea: For each number, test every digit: non-zero and divides original number.
 // Invariant: Number is valid iff all extracted digits pass both checks.

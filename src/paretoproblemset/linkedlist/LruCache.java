@@ -1,4 +1,6 @@
-﻿import java.util.HashMap; // import HashMap for quick key->node lookup
+package paretoproblemset.linkedlist;
+
+import java.util.HashMap; // import HashMap for quick key->node lookup
 import java.util.Map; // import Map interface for the node cache
 
 // Problem: LeetCode 146 - LRU Cache

@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 11 - Container With Most Water
+package paretoproblemset.twopointers;
+
+// Problem: LeetCode 11 - Container With Most Water
 // Pattern: Two Pointers
 // Core idea: Area is width * min(height[left], height[right]); move shorter side inward.
 // Invariant: Keeping taller side and moving shorter side is the only chance to improve min-height bound.

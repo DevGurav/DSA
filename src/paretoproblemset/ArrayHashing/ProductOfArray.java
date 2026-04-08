@@ -1,3 +1,5 @@
+package paretoproblemset.arrayhashing;
+
 // Problem: LeetCode 238 - Product of Array Except Self
 // Pattern: Prefix-Suffix Products (Array Precomputation)
 // Core idea: Store left products in result, then multiply by running right product in reverse pass.

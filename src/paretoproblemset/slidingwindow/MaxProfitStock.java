@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 121 - Best Time to Buy and Sell Stock
+package paretoproblemset.slidingwindow;
+
+// Problem: LeetCode 121 - Best Time to Buy and Sell Stock
 // Pattern: Two Pointers / One Pass
 // Core idea: Track lowest buy index so far and update max profit using current sell day.
 // Invariant: i always points to best buy day seen before current j.

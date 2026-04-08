@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 704    Classic Binary Search (sorted array)
+package paretoproblemset.binarysearch;
+
+// Problem: LeetCode 704    Classic Binary Search (sorted array)
 // Pattern: Binary Search
 // Core idea: Compare target with middle and discard half each iteration.
 // Invariant: If target exists, it always lies within current [left, right] range.

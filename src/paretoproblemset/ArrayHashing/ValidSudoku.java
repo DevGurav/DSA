@@ -1,3 +1,5 @@
+package paretoproblemset.arrayhashing;
+
 import java.util.HashSet;
 import java.util.Set;
 

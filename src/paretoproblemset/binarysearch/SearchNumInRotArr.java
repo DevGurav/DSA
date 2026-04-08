@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 33 - Search in Rotated Sorted Array
+package paretoproblemset.binarysearch;
+
+// Problem: LeetCode 33 - Search in Rotated Sorted Array
 // Pattern: Binary Search on Rotated Array
 // Core idea: Identify sorted half first, then check whether target lies inside that half.
 // Invariant: Target, if present, always remains in the chosen search interval.

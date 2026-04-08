@@ -1,3 +1,4 @@
+package paretoproblemset.tree;
 
 // Problem: LeetCode 543 - Diameter of Binary Tree
 // Pattern: Tree DFS (Post-order)
@@ -43,21 +44,5 @@ public class DiameterBinaryTree
 
         // Return current subtree height to parent.
         return Math.max(leftHeight, rightHeight) + 1;
-    }
-}
-
-//Definition for a binary tree node.
-class TreeNode
-{
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right)
-    {
-        this.val = val;
-        this.left = left;
-        this.right = right;
     }
 }

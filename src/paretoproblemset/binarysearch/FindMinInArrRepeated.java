@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 154 - Find Minimum in Rotated Sorted Array II
+package paretoproblemset.binarysearch;
+
+// Problem: LeetCode 154 - Find Minimum in Rotated Sorted Array II
 // Pattern: Binary Search with Duplicates
 // Core idea: Compare mid with right; when equal, shrink right by one to break ambiguity.
 // Invariant: The minimum is never discarded from the current [l, r] interval.

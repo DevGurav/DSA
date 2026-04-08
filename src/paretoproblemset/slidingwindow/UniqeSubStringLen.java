@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 3 - Longest Substring Without Repeating Characters
+package paretoproblemset.slidingwindow;
+
+// Problem: LeetCode 3 - Longest Substring Without Repeating Characters
 // Pattern: Sliding Window + HashSet
 // Core idea: Expand right; while duplicate exists, remove from left until window is unique.
 // Invariant: Set always matches characters currently inside the window and contains no duplicates.

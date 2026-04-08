@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 424 - Longest Repeating Character Replacement
+package paretoproblemset.slidingwindow;
+
+// Problem: LeetCode 424 - Longest Repeating Character Replacement
 // Pattern: Sliding Window
 // Core idea: Keep largest valid window where replacements needed does not exceed k.
 // Invariant: Window is valid when (window length - maxFreqInWindow) <= k.

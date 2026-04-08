@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 153 - Find Minimum in Rotated Sorted Array
+package paretoproblemset.binarysearch;
+
+// Problem: LeetCode 153 - Find Minimum in Rotated Sorted Array
 // Pattern: Binary Search
 // Core idea: Compare mid with right to decide which side contains rotation minimum.
 // Invariant: The minimum element always remains inside [left, right].

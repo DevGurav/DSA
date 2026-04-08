@@ -1,3 +1,5 @@
+package paretoproblemset.arrayhashing;
+
 // Problem: LeetCode 13 - Roman to Integer
 // Pattern: String Parsing + Hash Lookup
 // Core idea: Traverse from right to left; subtract when current symbol is smaller than previous, else add.

@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 125 - Valid Palindrome
+package paretoproblemset.twopointers;
+
+// Problem: LeetCode 125 - Valid Palindrome
 // Pattern: Two Pointers / String Normalization
 // Core idea: Keep only alphanumeric chars in lowercase, then compare with reversed cleaned string.
 // Invariant: If cleaned string equals its reverse, the original string is palindrome under problem rules.

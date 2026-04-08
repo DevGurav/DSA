@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 1502 - Can Make Arithmetic Progression From Sequence
+package mathquest;
+
+// Problem: LeetCode 1502 - Can Make Arithmetic Progression From Sequence
 // Pattern: Math + Hashing by Position
 // Core idea: Use min/max to compute expected difference, then verify every value fits a valid arithmetic slot.
 // Invariant: Every number must map to one unique index in progression formula (arr[i]-min)/diff.

@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 167 - Two Sum II (Input Array Is Sorted)
+package paretoproblemset.twopointers;
+
+// Problem: LeetCode 167 - Two Sum II (Input Array Is Sorted)
 // Pattern: Two Pointers
 // Core idea: Start at both ends and move pointers based on current sum vs target.
 // Invariant: At each step, discarded pairs cannot become valid because array is sorted.

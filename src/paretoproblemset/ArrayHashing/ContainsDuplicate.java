@@ -1,4 +1,4 @@
-package paretoproblemset.ArrayHashing;
+package paretoproblemset.arrayhashing;
 
 // Problem: LeetCode 217 - Contains Duplicate
 // Pattern: HashSet

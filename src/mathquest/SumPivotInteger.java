@@ -1,3 +1,5 @@
+package mathquest;
+
 // Problem: LeetCode 2485 - Find the Pivot Integer
 // Pattern: Math / Arithmetic Sum
 // Core idea: For each i, compare sum(1..i) and sum(i..n) using formulas.

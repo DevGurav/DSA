@@ -1,3 +1,5 @@
+package paretoproblemset.arrayhashing;
+
 import java.util.HashSet;
 
 // Problem: LeetCode 128 - Longest Consecutive Sequence

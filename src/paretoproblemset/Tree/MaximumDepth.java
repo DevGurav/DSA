@@ -1,3 +1,5 @@
+package paretoproblemset.tree;
+
 // Problem: LeetCode 104 - Maximum Depth of Binary Tree
 // Pattern: Tree DFS (Recursion)
 // Core idea: Depth of current node = 1 + max(depth of left subtree, depth of right subtree).
@@ -18,7 +20,7 @@
 // B) Recursively compute left subtree depth.
 // C) Recursively compute right subtree depth.
 // D) Return 1 + max(leftDepth, rightDepth).
-public class MaxDepth
+public class MaximumDepth
 {
 
     public int maxDepth(TreeNode root)
@@ -34,21 +36,3 @@ public class MaxDepth
     }
 }
 
-
-
-//  * Definition for a binary tree node.
-class TreeNode 
-{
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode() {}
-    TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right)
-    {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
- 

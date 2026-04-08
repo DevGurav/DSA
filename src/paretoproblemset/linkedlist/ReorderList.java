@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 143 - Reorder List
+package paretoproblemset.linkedlist;
+
+// Problem: LeetCode 143 - Reorder List
 // Pattern: Linked List (Find Middle + Reverse + Merge)
 // Core idea: Split list in half, reverse second half, then merge alternately.
 // Invariant: During merge, first part order is preserved and second part contributes nodes in reverse order.

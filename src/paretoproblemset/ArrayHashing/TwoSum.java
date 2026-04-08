@@ -1,4 +1,6 @@
-﻿import java.util.HashMap;
+package paretoproblemset.arrayhashing;
+
+import java.util.HashMap;
 import java.util.Map;
 
 // Problem: LeetCode 1 - Two Sum

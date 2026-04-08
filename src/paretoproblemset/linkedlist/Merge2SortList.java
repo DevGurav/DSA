@@ -1,4 +1,6 @@
-﻿// Problem: LeetCode 21 - Merge Two Sorted Lists
+package paretoproblemset.linkedlist;
+
+// Problem: LeetCode 21 - Merge Two Sorted Lists
 // Pattern: Linked List Merge
 // Core idea: Repeatedly attach smaller current node from two sorted lists.
 // Invariant: Merged list remains sorted after every attachment.
